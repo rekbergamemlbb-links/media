@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | REKBER.GAMEMLBB</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+
+<!-- CONFIRM MODAL -->
+<div id="confirmModal" class="modal">
+  <div class="modal-box">
+    <p id="confirmText">Yakin?</p>
+    <div class="modal-actions">
+      <button onclick="closeModal()" class="btn-cancel">Batal</button>
+      <button id="confirmBtn" class="btn-confirm">Ya, Lanjut</button>
+    </div>
+  </div>
+</div>
+
+<body>
+
+<header class="top">
+  <h1>Admin Panel</h1>
+  <span>REKBER.GAMEMLBB</span>
+</header>
+
+<main class="wrap">
+
+  <!-- BRAND SETTINGS -->
+  <section class="card">
+    <h2>Pengaturan Brand</h2>
+
+    <label>Title</label>
+    <input id="title">
+
+    <label>Tagline</label>
+    <input id="tagline">
+
+    <label>Description</label>
+    <input id="description">
+
+    <label>Logo URL</label>
+    <input id="logo">
+
+    <label>Primary Color (Hex)</label>
+    <input id="primaryColor">
+
+    <label>Background Top</label>
+    <input id="bgTop">
+
+    <label>Background Bottom</label>
+    <input id="bgBottom">
+
+    <button class="btn save-main" onclick="saveBrand()">💾 Simpan Brand</button>
+  </section>
+
+  <!-- LINKS -->
+  <section class="card">
+    <h2>Daftar Link</h2>
+    <div id="links"></div>
+    <button class="btn add" onclick="addLink()">+ Tambah Link</button>
+  </section>
+
+</main>
+
+<div id="toast"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>
